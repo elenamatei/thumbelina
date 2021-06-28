@@ -1,0 +1,41 @@
+@import "schema-cromatica.css";
+
+#program td, th {
+    padding: 1rem;
+    border: 1px solid var(--verde-inchis);
+}
+
+#program th {
+    background-color: var(--verde-inchis);
+}
+#program tr{
+    background-color: var(--verde-deschis);
+}
+
+#program tr:nth-of-type(odd) {
+ background-color: var(--roz-deschis) ;   
+}
+
+#program tr:hover {
+    background-color: var(--roz-inchis);
+}
+div.tabel table{
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid;
+    border-collapse: collapse;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 700px) {
+    .scroll {
+        overflow-x: scroll;
+        width: 250px;
+        margin: auto;
+        
+    }
+}
+
+
+
+
+

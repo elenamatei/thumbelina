@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro"> 
+    <head>
+       
+        
+        <meta name="description" content="Floraria Thumbelina va incanta cu o foarte mare varietate de flori: buchete,cutii,cosuri,cadouri personalizate">
+        <meta name="keywords" content="lalea,zambila,ursulet,produse,pret,crini,ciocolata,cos,cutie,flori,trandafir,rosu,buchet,cadou">
+        <link rel="stylesheet" href="/resurse/css/useri.css" type="text/css" />
+        <title>403 Forbidden</title>
+        <%- include("../fragmente/head") %>
+
+    </head>
+    <body>
+    
+    <%- include("../fragmente/header") %> <!--afiseaza rezultatul fct apelate(aici include)-->
+
+    <main>
+        <div class="afisaj">
+            <h2>Useri</h2>
+    
+            <table id="useri">
+              <tr>
+                <th>id</th><th>Nume</th><th>Email</th><th>Data Inregistrare</th><th>Rol</th><th>Schimba rol</th>
+              </tr>
+    
+              <% for (var i = 0; i < useri.length; i++) { 
+                    if(useri[i].rol=="comun"){
+                    %>
+                    <tr>
+                      <td><%= useri[i].id %></td>
+                      <td><%= useri[i].nume %> </td>
+                      <td><%= useri[i].email %></td>
+                      <%  
+                        d=new Date(useri[i].data_inregistrare)
+                        sir_data=`${d.getDate()}/${d.getMonth()}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+                      %>
+                      <td><%=  sir_data %></td>
+                       <td><%=  useri[i].rol %></td>
+                      <td>
+                        <form id="modifica" method="post" action="/schimba-rol">
+                             <input type="submit" value="Submit">
+                        </form>
+                      </td>
+                    </tr> 
+       
+                    <% } %>			
+              <% } %>
+            </table>
+            
+        </div>
+    </main>  
+    <footer>
+        <%- include("../fragmente/footer") %>
+    </footer>
+    <div id="banner">Acesta este un proiect scolar! &#128517;</div>
+    </body>
+    
+    </html>

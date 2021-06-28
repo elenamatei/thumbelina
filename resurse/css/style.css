@@ -1,0 +1,69 @@
+body{
+    --padding-general:3rem;
+    --padding-intern:5%;
+    
+}
+body.dark{
+    --roz-deschis-transparent: rgba(150, 119, 145,0.80);
+    --roz-deschis: rgb(150, 119, 145);
+    --verde-deschis-transparent: rgba(101,143,100,0.80);
+    --verde-deschis:rgb(101,143,100);
+    --roz: rgb(138,95,131);
+    --roz-inchis:rgb(92,37,80);
+    --verde-inchis:rgb(73,107,63);
+    --negru: white;
+    --fundal: url("../imagini/flori-dark.jpg");
+}
+main{
+    padding: 2rem;
+    --main-border:1px solid grey;
+    border-left:var(--main-border);
+    border-right:var(--main-border);
+    
+}
+footer{
+    padding-left:var(--padding-intern);
+    padding-right:var(--padding-intern);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+h2{
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+section p,div p,li,adress
+{
+    font-family: 'Karla', sans-serif;
+}
+div.flex-container a{
+    font-family: 'Timmana', sans-serif;
+}
+
+nav{
+    color:var(--negru);
+}
+
+
+#schimbare-tema {
+    border: 10px solid black;
+    /*padding: 2rem 1rem;*/
+    min-height: 1em;
+    width: 10%;
+    resize: both;
+    background: linear-gradient(to top, rgba(#cffffe, 0.3), rgba(#f9f7d9, 0.3), rgba(#fce2ce, 0.3), rgba(#ffc1f3, 0.3));
+    border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
+  }
+
+#login{
+      color:var(--negru);
+      text-decoration: solid;
+      border: 10px solid black;
+      min-height: 1em;
+      width: 20%;
+      resize: both;
+      border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
+  }
+
+  div.cos{
+      padding:2rem;
+  }
+

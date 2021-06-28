@@ -1,0 +1,361 @@
+{
+    "cale_galerie": "resurse/imagini/galerie",
+    "imagini": [
+        {
+            "cale_fisier": "cadou-craciun.png",
+            "titlu": "Cadou Craciun",
+            "alt": "Cadou de Craciun",
+            "text_descriere": "Cadou",
+            "luni": [
+                "ianuarie",
+                "februarie",
+                "decembrie"
+            ]
+        },
+        {
+            "cale_fisier": "craciun.png",
+            "titlu": "Aranjament Craciun",
+            "alt": "Aranjament de Craciun",
+            "text_descriere": "Aranjament",
+            "luni": [
+                "ianuarie",
+                "februarie",
+                "decembrie"
+            ]
+        },
+        {
+            "cale_fisier": "decoratiune.png",
+            "titlu": "Decoratiune Craciun",
+            "alt": "Decoratiune cu lumanari",
+            "text_descriere": "Decoratiune",
+            "luni": [
+                "ianuarie",
+                "februarie",
+                "decembrie"
+            ]
+        },
+        {
+            "cale_fisier": "craciunita1.png",
+            "titlu": "Craciunita",
+            "alt": "Craciunita alba",
+            "text_descriere": "Craciunita alba",
+            "luni": [
+                "ianuarie",
+                "februarie",
+                "decembrie"
+            ]
+        },
+        {
+            "cale_fisier": "craciunita2.png",
+            "titlu": "Craciunita",
+            "alt": "Craciunita rosie",
+            "text_descriere": "Craciunita rosie",
+            "luni": [
+                "ianuarie",
+                "februarie",
+                "decembrie"
+            ]
+        },
+        {
+            "cale_fisier": "craciun2.png",
+            "titlu": "Merry Christmas",
+            "alt": "Merry Christmas",
+            "text_descriere": "Craciun fericit!",
+            "luni": [
+                "ianuarie",
+                "februarie",
+                "decembrie"
+            ]
+        },
+        {
+            "cale_fisier": "trandafir_zapada.png",
+            "titlu": "Trandafir",
+            "alt": "Trandafir",
+            "text_descriere": "Trandafir in zapada",
+            "luni": [
+                "ianuarie",
+                "februarie",
+                "decembrie"
+            ]
+        },
+        {
+            "cale_fisier": "zapada.png",
+            "titlu": "Flori iarna",
+            "alt": "Flori",
+            "text_descriere": "Flori in zapada",
+            "luni": [
+                "ianuarie",
+                "februarie",
+                "decembrie"
+            ]
+        },
+
+        {
+            "cale_fisier": "ghiocei.png",
+            "titlu": "Ghiocei",
+            "alt": "Ghiocei",
+            "text_descriere": "Ghiocei :)",
+            "luni": [
+                "martie",
+                "aprilie",
+                "mai"
+            ]
+        },
+        {
+            "cale_fisier": "ghiocei_colorati.png",
+            "titlu": "Ghiocei colorati",
+            "alt": "Ghiocei galbeni si albastrii",
+            "text_descriere": "Ghiocei colorati",
+            "luni": [
+                "martie",
+                "aprilie",
+                "mai"
+            ]
+        },
+        {
+            "cale_fisier": "lalele.png",
+            "titlu": "Lalele",
+            "alt": "Lalele multicolore",
+            "text_descriere": "Buchete lalele",
+            "luni": [
+                "martie",
+                "aprilie",
+                "mai"
+            ]
+        },
+        {
+            "cale_fisier": "lalele2.png",
+            "titlu": "Lalele",
+            "alt": "Lalele in vaza",
+            "text_descriere": "Lalele roz",
+            "luni": [
+                "martie",
+                "aprilie",
+                "mai"
+            ]
+        },
+        {
+            "cale_fisier": "liliac.png",
+            "titlu": "Liliac",
+            "alt": "Liliac mov",
+            "text_descriere": "Liliac",
+            "luni": [
+                "martie",
+                "aprilie",
+                "mai"
+            ]
+        },
+        {
+            "cale_fisier": "zambile.png",
+            "titlu": "Zambile",
+            "alt": "Zambile in vaza",
+            "text_descriere": "Zambile mov",
+            "luni": [
+                "martie",
+                "aprilie",
+                "mai"
+            ]
+        },
+        {
+            "cale_fisier": "magnolie.png",
+            "titlu": "Copac magnolie",
+            "alt": "Magnolie",
+            "text_descriere": "Magnloia",
+            "luni": [
+                "martie",
+                "aprilie",
+                "mai"
+            ]
+        },
+        {
+            "cale_fisier": "pasare.png",
+            "titlu": "Crenguta inflorita",
+            "alt": "Pasare de primavara",
+            "text_descriere": "Flori de primavara",
+            "luni": [
+                "martie",
+                "aprilie",
+                "mai"
+            ]
+        },
+
+        {
+            "cale_fisier": "maci.png",
+            "titlu": "Maci",
+            "alt": "Maci rosii",
+            "text_descriere": "Maci",
+            "luni": [
+                "iunie",
+                "iulie",
+                "august"
+            ]
+        },
+        {
+            "cale_fisier": "lavanda.png",
+            "titlu": "Lavanda",
+            "alt": "Camp lavanda",
+            "text_descriere": "Lavanda",
+            "luni": [
+                "iunie",
+                "iulie",
+                "august"
+            ]
+        },
+        {
+            "cale_fisier": "trandafiri.png",
+            "titlu": "Trandafiri",
+            "alt": "Trandafiri in vaza",
+            "text_descriere": "Trandafiri roz",
+            "luni": [
+                "iunie",
+                "iulie",
+                "august"
+            ]
+        },
+        {
+            "cale_fisier": "vara.png",
+            "titlu": "Picnic cu flori",
+            "alt": "Picnic",
+            "text_descriere": "Picnic cu flori",
+            "luni": [
+                "iunie",
+                "iulie",
+                "august"
+            ]
+        },
+        {
+            "cale_fisier": "bujor-v.png",
+            "titlu": "Bujori",
+            "alt": "Bujori albi si roz",
+            "text_descriere": "Bujori",
+            "luni": [
+                "iunie",
+                "iulie",
+                "august"
+            ]
+        },
+        {
+            "cale_fisier": "eveniment.png",
+            "titlu": "Aranjamente nunta",
+            "alt": "Aranjamente eveniment",
+            "text_descriere": "Aranjamente",
+            "luni": [
+                "iunie",
+                "iulie",
+                "august"
+            ]
+        },
+        {
+            "cale_fisier": "limonada.png",
+            "titlu": "Limonda",
+            "alt": "Limonada si flori",
+            "text_descriere": "Aranjamente",
+            "luni": [
+                "iunie",
+                "iulie",
+                "august"
+            ]
+        },
+        {
+            "cale_fisier": "grau.png",
+            "titlu": "Lan de grau",
+            "alt": "Spice de grau",
+            "text_descriere": "Grau",
+            "luni": [
+                "iunie",
+                "iulie",
+                "august"
+            ]
+        },
+
+        {
+            "cale_fisier": "bicicleta-t.png",
+            "titlu": "Decoratiune bicicleta",
+            "alt": "Arannjament bicicleta",
+            "text_descriere": "Bicicleta cu flori",
+            "luni": [
+                "septembrie",
+                "octombrie",
+                "noiembrie"
+            ]
+        },
+        {
+            "cale_fisier": "floare-albastra-t.png",
+            "titlu": "Floare",
+            "alt": "Floare albatra",
+            "text_descriere": "Albastrea",
+            "luni": [
+                "septembrie",
+                "octombrie",
+                "noiembrie"
+            ]
+        },
+        {
+            "cale_fisier": "dovleac.png",
+            "titlu": "Aranjament dovleac",
+            "alt": "Aranjament toamna",
+            "text_descriere": "Dovleac",
+            "luni": [
+                "septembrie",
+                "octombrie",
+                "noiembrie"
+            ]
+        },
+        {
+            "cale_fisier": "floarea-soarelui.png",
+            "titlu": "Floarea-soarelui",
+            "alt": "Floarea soarelui-lan",
+            "text_descriere": "Floarea-soarelui",
+            "luni": [
+                "septembrie",
+                "octombrie",
+                "noiembrie"
+            ]
+        },
+        {
+            "cale_fisier": "floare-toamna.png",
+            "titlu": "Floare de toamna",
+            "alt": "Floare portocalie",
+            "text_descriere": "Floare",
+            "luni": [
+                "septembrie",
+                "octombrie",
+                "noiembrie"
+            ]
+        },
+        {
+            "cale_fisier": "poza-toamna.png",
+            "titlu": "Toamna",
+            "alt": "Iarba uscata",
+            "text_descriere": "Toamna",
+            "luni": [
+                "septembrie",
+                "octombrie",
+                "noiembrie"
+            ]
+        },
+        {
+            "cale_fisier": "frunze.png",
+            "titlu": "Frunze",
+            "alt": "Frunze ruginii",
+            "text_descriere": "Frunze uscate",
+            "luni": [
+                "septembrie",
+                "octombrie",
+                "noiembrie"
+            ]
+        },
+        {
+            "cale_fisier": "trandafir_rosu.png",
+            "titlu": "Trandafir",
+            "alt": "Trandafir rosu",
+            "text_descriere": "Trandafir",
+            "luni": [
+                "septembrie",
+                "octombrie",
+                "noiembrie"
+            ]
+        }
+
+    ]
+}

@@ -1,0 +1,46 @@
+@import "schema-cromatica.css";
+
+  #link-top{
+    position: fixed;
+    display:block;
+    opacity:0.5;
+    bottom:7px;
+    right:7px;
+    width:50px;
+    height:50px;
+    background-color: white;
+   /* border-radius: 0.7rem;
+    border-bottom-right-radius: 0px;*/
+    border:1px solid var(--roz-inchis);
+    box-shadow:0px 0px 7px 2px inset var(--roz-inchis);
+    overflow:visible;
+    transform: rotate(45deg);
+    transition: background-color 400ms;
+}
+
+  #link-top:hover{
+      opacity:1;
+      background-color:var(--roz-inchis);
+  }
+  #con:hover{
+      opacity:1;
+      border-bottom: 36px solid var(--roz-deschis);
+      
+  }
+  
+  #con{
+    position:absolute;
+    bottom:9px;
+    right:9px;
+    padding:0;
+    width: 0;
+	height: 0;
+	border-left: 18px solid transparent;
+	border-right: 18px solid transparent;
+	border-bottom: 36px solid var(--roz-inchis);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    transform: rotate(-45deg);
+    transition: border-bottom 400ms;
+   
+  }

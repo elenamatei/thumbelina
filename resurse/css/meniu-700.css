@@ -1,0 +1,12 @@
+@import "schema-cromatica.css";
+
+html{
+    font-size: 14px;
+}
+#casuta{
+    display:block;
+}
+#hide{
+    display:none;
+}
+

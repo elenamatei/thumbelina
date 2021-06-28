@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro"> 
+    <head>
+       
+        
+        <meta name="description" content="Floraria Thumbelina va incanta cu o foarte mare varietate de flori,stranse in buchete cu un design aparte. De asemenea, venim in ajutorul celor ce nu au idei de cadouri,oferind surprize nemaipomenite pentru cei dragi dumneavoastra.">
+        <meta name="keywords" content="florarie,flori,trandafir,rosu,buchet,cadou">
+        
+        <title>Florăria Thumbelina</title>
+        <%- include("../fragmente/head") %>
+      
+
+    </head>
+    <body>
+    
+    <%- include("../fragmente/header") %> <!--afiseaza rezultatul fct apelate(aici include)-->
+
+    <main>
+    <section id="galerie-statica">
+        <h2>Galerie Statică</h2>
+        <div id="grid-galerie">
+            <% for(let img of locals.imagini){%>
+                    <div class="div<% (locals.imagini).indexOf(img) %>">
+                    <figure>
+                        <picture>
+                            <source srcset="/<%- img.mic %>" media="(max-width:500px)"/>
+                            <source srcset="/<%- img.mediu %>" media="(max-width:700px)"/> 
+                            <img src="<%- img.mare %>" alt="poza"/>
+                        </picture>
+                      <figcaption><%- img.titlu %></figcaption>
+                    </figure>
+                </div>
+           <% } %> 
+           <div class = "div2"></div>
+           <div class = "div4"></div>
+           <div class = "div6"></div>
+           <div class = "div8"></div>
+           <div class = "div10"></div>
+           <div class = "div12"></div>
+
+
+        </div>
+    </section>
+
+    </main>  
+    <footer>
+        <%- include("../fragmente/footer") %>
+    </footer>
+    <div id="banner">Acesta este un proiect scolar! &#128517;</div>
+    </body>
+    
+    </html>
+    

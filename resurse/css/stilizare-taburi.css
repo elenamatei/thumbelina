@@ -1,0 +1,49 @@
+@import "schema-cromatica.css";
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;  
+    justify-content: center; 
+    width:550px;
+  }
+  
+  .flex-container > a {
+    background-color: #f1f1f1;
+    color:var(--roz-inchis);
+    box-shadow: var(--verde-deschis) 0px 0px 10px;
+    transition:all 0.5s linear;
+    text-align: center;
+    width: 4rem;
+    margin: 0.5rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    border-bottom: none;
+    border:2px solid var(--roz);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .flex-container a+a{  
+    margin-left:-5px;
+}
+
+  .flex-container a:hover{
+      background-color:var(--verde-deschis);
+      background-image: none;
+      color: var(--negru);
+  }
+  iframe{ border: 10px solid var(--verde-deschis);
+  }
+ /* @media screen and (max-width:500px){
+    .flex-container {
+      width:250x;
+      justify-content: center; 
+    
+    }
+}*/
+@media screen and (max-width:700px){
+  .flex-container {
+    width:360px;;
+    justify-content: center; 
+  
+  }
+}
+

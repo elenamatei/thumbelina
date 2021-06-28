@@ -1,0 +1,28 @@
+body{
+    --roz-deschis-transparent: rgba(255, 204, 231,0.80);
+    --roz-deschis: rgb(255, 204, 231);
+    --verde-deschis-transparent: rgba(152,214,152,0.80);
+    --verde-deschis:rgb(152,214,152);
+    --roz: rgb(214,153,184);
+    --roz-inchis:rgb(138,83,112);
+    --verde-inchis:rgb(70,138,70);
+    --negru:black;
+    --fundal:url("../imagini/flori.jpg");
+    color:var(--negru);
+    
+}
+
+main{
+    background-color: var(--roz-deschis-transparent);
+    
+    
+}
+h2{
+    color:var(--roz-inchis);
+}
+h3{
+    color:var(--verde-inchis);
+}
+header, footer{
+    background-color:var(--verde-deschis-transparent);
+}

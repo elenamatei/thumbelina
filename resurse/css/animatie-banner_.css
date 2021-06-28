@@ -1,0 +1,56 @@
+@import "schema-cromatica.css";
+
+@media screen and(min-width: 00px) {
+    
+}
+#banner{
+    display: block;
+    position: fixed;
+    animation: animatie 7s;
+    background-color: var(--roz-deschis);
+    padding: 1rem;
+    width: 100%;
+   /* bottom: 3em;*/
+    opacity: 0;
+    text-align: center;
+    box-shadow: 0px 20px 20px 0px var(--roz-inchis);
+    right:0;
+    left:0;
+}
+
+@keyframes animatie {
+
+    0% {
+        opacity: 0;
+        background-color: var(--roz);
+        bottom:0;
+    }
+
+
+    21.428% {
+        opacity: 1;
+        background-color: var(--roz-deschis); 
+        bottom: 20px;
+        color:var(--verde-inchis);
+        
+    }
+
+    42.857%{
+        opacity: 1;
+        background-color: var(--roz-deschis);
+        bottom:0;
+        color: var(--roz-inchis);
+    }
+
+    85.714% {
+        opacity: 1;
+        background-color: var(--roz-deschis);
+        bottom:0;
+        color: var(--roz-inchis);
+    }
+    100%{
+        opacity:0;
+    }
+
+    
+}

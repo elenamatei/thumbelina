@@ -1,0 +1,119 @@
+@import "schema-cromatica.css";
+
+body{
+    --inaltime-meniu:3rem;
+    --padding-intern:4%;
+}
+
+
+nav ul.meniu ul{
+
+    display: none;
+	    position:absolute;
+	    width:100%;
+}
+nav{
+    
+    height:3rem;
+    width:100%;
+    top:0;
+    padding:0;
+    background:var(--verde-deschis);
+    z-index:10;
+    position:sticky;
+}
+ul.meniu div.grad:after{
+    position:absolute;
+    content:"";
+    width:100%;
+    height:0.5rem;
+    top:100%;
+    left:0;
+    background-color:var(--verde-deschis);
+    transition: transform 0.7s;
+    transform:scaleX(0);
+    transform-origin: right;
+
+}
+ul.meniu div.grad:hover::after{
+    background-image:linear-gradient(to right,var(--verde-deschis),white);
+    transform:scaleX(1);
+    transform-origin: left;
+}
+
+nav ul.meniu>li{
+    float:left;
+    width:100px;
+	position:relative;
+}
+
+nav ul, nav li{
+    padding:0;
+    margin:0;
+}
+nav ul.meniu li{
+    text-align:center;
+    list-style-type: none;
+    font-weight:bold;
+    background:var(--verde-deschis);
+    cursor:pointer;
+}
+nav ul.meniu li a, nav ul.meniu li div{
+    text-decoration: none;
+    color:black;
+    display: block;
+    font-weight:bold;
+    height:2.5rem;
+    line-height:2.5rem;
+    z-index:20;
+    /*outline:1px solid var(--verde-deschis);*/
+}
+ul.meniu a:hover/*, ul.meniu div:hover*/{
+    background:var(--roz) ;
+    color:var(--verde-inchis);
+    
+}
+
+
+ul.meniu a{
+   transition: background 700ms linear; 
+}
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+nav ul.meniu>li:hover>ul{
+	display:block;
+    animation-name: aparitie_meniu;
+    animation-iteration-count:1;
+    animation-duration:0.7s;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+@keyframes aparitie_meniu{
+    0%{
+        opacity:0;
+    } 
+	100%{
+    	opacity:1;
+    }
+}
+#hamburger{
+    display: none;
+    height: var(--inaltime-meniu);
+}
+#ch-menu{
+    display: none ;
+}
+#ch-submenu{
+    display: none ;
+}
+#hamburger img{
+    height:100%;
+    width:auto;
+  }
+#casuta{
+    display:none;
+}
+

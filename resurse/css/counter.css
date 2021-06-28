@@ -1,0 +1,8 @@
+body {
+    counter-reset: li;
+  }
+  
+ #calendar li::before {
+    counter-increment: li;
+    content: "Eveniment " counter(li) ": ";
+  }

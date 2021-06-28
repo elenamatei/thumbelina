@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro"> 
+    <head>
+       
+        
+        <meta name="description" content="Floraria Thumbelina va incanta cu o foarte mare varietate de flori: buchete,cutii,cosuri,cadouri personalizate">
+        <meta name="keywords" content="lalea,zambila,ursulet,produse,pret,crini,ciocolata,cos,cutie,flori,trandafir,rosu,buchet,cadou">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/404_style.css"/>
+        <title>Eroare 404</title>
+        <%- include("../fragmente/head") %>
+       
+
+    </head>
+    <body>
+    
+    <%- include("../fragmente/header") %> <!--afiseaza rezultatul fct apelate(aici include)-->
+
+    <main>
+        <section>
+            <h2>EROARE 404</h2>
+            <p>Nu am gasit un buchet de flori pe placul dumneavoastra :((((</p>
+        </section>
+        <div id="eroare">
+            <div id="poza-eroare">
+        <picture>      
+            <source srcset="./resurse/imagini/not-found-2384304_640.jpg" media="(max-width:700px)"/>
+            <source srcset="./resurse/imagini/not-found-2384304_1280.jpg" media="(max-width:1200px)"/>
+            <img src="./resurse/imagini/not-found-2384304_640.jpg" alt="eroare 404"/>
+        </picture>
+    </div>
+        </div>
+    </main>  
+    <footer>
+        <%- include("../fragmente/footer") %>
+    </footer>
+    <div id="banner">Acesta este un proiect scolar! &#128517;</div>
+    </body>
+    
+    </html>

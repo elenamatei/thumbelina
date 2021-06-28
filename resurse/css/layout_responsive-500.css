@@ -1,0 +1,43 @@
+@import "schema-cromatica.css";
+
+
+html{
+    font-size:11px;
+}
+
+body{
+    --body-padding:0px;
+    
+}
+h1{
+    text-align: center;
+}
+
+/*#gridd{
+    display:block;
+}*/
+main{
+    display:block;
+}
+
+section{
+    margin-top:1rem;
+}
+
+#program{
+    overflow: out;
+}
+
+
+@media screen and (max-width:500px){
+    #grid-galerie {
+        display:block;
+    }
+
+     
+    .flex-container {
+      width:250x;
+      justify-content: center; 
+
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ro"> 
+    <head>
+       
+        
+        <meta name="description" content="Floraria Thumbelina va incanta cu o foarte mare varietate de flori: buchete,cutii,cosuri,cadouri personalizate">
+        <meta name="keywords" content="lalea,zambila,ursulet,produse,pret,crini,ciocolata,cos,cutie,flori,trandafir,rosu,buchet,cadou">
+        
+        <title>Florăria Thumbelina - Produse</title>
+        <%- include("../fragmente/head") %>
+        
+        
+
+    </head>
+    <body>
+    
+    <%- include("../fragmente/header") %> <!--afiseaza rezultatul fct apelate(aici include)-->
+
+    <main>
+        <section>
+            <h2>Pagină produs</h2>
+                <article id="art-produs">
+                    <p><i class="fab fa-pagelines"></i>Categorie: <span class="categorie"><%- locals.prod.categorie%></span></p>
+                    <h3><span class="nume"><%- locals.prod.nume%></span></h3>
+                    <figure class="imag-produs">
+                <img src="/resurse/imagini/produse/<%- locals.prod.imagine%>" alt="Imagine produs" />
+                    </figure>
+                    <p><i class="fas fa-hand-holding-usd"></i></i>Pret: <span class="pret"><%- locals.prod.pret%></span> lei</p>
+                    <p><i class="fab fa-pagelines"></i>Descriere: <span class="descriere"><%- locals.prod.descriere%></span></p>
+                    <p><i class="fab fa-pagelines"></i>Componente: <span class="componente"><%- locals.prod.componente%></span></p>
+                    <%  
+                        d=new Date(locals.prod.data_adaugare.data_adaugare)
+                        sir_data=`${d.getDate()}/${d.getMonth()}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+                      %>
+                    <p><i class="fab fa-pagelines"></i>Data adăugare: <span class="data_adaugare"><%- sir_data %></span></p>
+
+                </article>
+
+           
+            
+        </section>
+    </main>  
+    <footer>
+        <%- include("../fragmente/footer") %>
+    </footer>
+    <div id="banner">Acesta este un proiect scolar! &#128517;</div>
+    </body>
+    
+    </html>

@@ -1,0 +1,11 @@
+@import "schema-cromatica.css";
+hr.bara{
+    display: block;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    background-color: var(--verde-inchis);
+    background-clip:content-box;
+    border-left:1rem solid var(--verde-inchis);
+    border-right:1rem solid var(--verde-inchis);
+    
+}

@@ -1,0 +1,51 @@
+@import "schema-cromatica.css";
+h2{
+    padding:0.4rem;
+}
+h3{
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: var(--verde-inchis);
+    text-align: center;
+}
+#art-produs{
+    border-radius: 25px;
+    margin:0 auto;
+    width:70%;
+    max-width:700px;
+    background-color: var(--roz-deschis-transparent);
+    padding:0.4rem;
+    box-sizing: border-box;
+    box-shadow: purple 0px 50px 100px -20px, purple 0px 30px 60px -30px, purple 0px -2px 6px 0px inset;
+}
+
+
+#art-produs p{
+    border-radius: 25px;
+    margin:0;
+    padding:0.4rem;
+    font-weight:bold;
+    font-size:1.1rem;
+    font-family: 'Mouse Memoirs', sans-serif;
+    background-color: var(--verde-deschis-transparent);
+    color: var(--roz-inchis);
+}
+
+#art-produs p span{
+    font-weight: normal;
+    font-family: 'Timmana', sans-serif;
+    color: var(--roz-inchis);
+}
+
+.imag-produs{
+    text-align: center;
+}
+.imag-produs img{
+    width:50%;
+    height:auto;
+}
+@media screen and (max-width: 700px){
+    #art-produs{
+        margin:0 auto;
+        width:95%;
+    }
+}

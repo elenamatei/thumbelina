@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ro"> 
+    <head>
+       
+        
+        <meta name="description" content="Floraria Thumbelina va incanta cu o foarte mare varietate de flori: buchete,cutii,cosuri,cadouri personalizate">
+        <meta name="keywords" content="lalea,zambila,ursulet,produse,pret,crini,ciocolata,cos,cutie,flori,trandafir,rosu,buchet,cadou">
+        <script type="text/javascript" src=/resurse/JavaScript/inregistrare.js></script>
+        <title>Florăria Thumbelina - Produse</title>
+        <%- include("../fragmente/head") %>
+
+
+
+    </head>
+    <body>
+    
+    <%- include("../fragmente/header") %> <!--afiseaza rezultatul fct apelate(aici include)-->
+
+    <main>
+        <div class="afisaj">
+            <h1>Inregistrare utilizator</h1>
+            
+            <% if (locals.err !="") { %>
+            <form id="form_inreg"  method="post" class="date"  action="/inreg" id="inregistrare" enctype="multipart/form-data">
+                <p>
+                    <label>
+                        Username: <input type="text" name="username"  value="cat<%= Math.floor(Math.random()*100000) %>" required pattern="[A-Za-z0-9]+">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Nume: <input type="text" name="nume" value="Pisicescu" required pattern="^[A-Z][a-z0-9_-]{3,20}$">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Prenume: <input type="text" name="prenume" value="Pisicel" required pattern="^[A-Z][a-z0-9_-]{3,20}$">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Parola: <input id="parl" type="password" name="parola" value="" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Reintroduceti parola: <input id="rparl" type="password" name="rparola" value="" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Email: <input type="text" name="email" value="elizamatei00@gmail.com"  size="50" required>
+                    </label>
+                </p>
+                <label>
+                    Telefon: <input type="text" name="telefon" value="0711111111"  size="50" required pattern="^(\+4|)?(0[0-9]{9})+$">
+                </label>
+            </p>
+                <p>
+                    <label>
+                        Poza: <input type="file" name="poza">
+                    </label>			
+                </p>
+                <p>		
+                    <input type="submit" value="Înregistrează-te">
+                    <input type="reset" value="Resetează">
+                </p>
+            </form>
+        <% } %>
+        <% if(locals.raspuns) { %>
+        <%- locals.raspuns+"<br/>"%>
+        <% } %>
+        <% if(locals.err) { %>
+        <%- locals.err %>
+        <% } %>
+        </div>
+    </main>  
+    <footer>
+        <%- include("../fragmente/footer") %>
+    </footer>
+    <div id="banner">Acesta este un proiect scolar! &#128517;</div>
+    </body>
+    
+    </html>

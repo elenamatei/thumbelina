@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ro"> 
+    <head>
+       
+        
+        <meta name="description" content="Floraria Thumbelina va incanta cu o foarte mare varietate de flori,stranse in buchete cu un design aparte. De asemenea, venim in ajutorul celor ce nu au idei de cadouri,oferind surprize nemaipomenite pentru cei dragi dumneavoastra.">
+        <meta name="keywords" content="florarie,flori,trandafir,rosu,buchet,cadou">
+        
+        <title>Florăria Thumbelina</title>
+        <%- include("../fragmente/head") %>
+
+
+        
+
+    </head>
+    <body>
+    
+    <%- include("../fragmente/header") %> <!--afiseaza rezultatul fct apelate(aici include)-->
+
+    <main>
+        <% if (!locals.utilizator) { %>
+			
+            <p>Va puteti loga aici: <br/>
+            <form id="login" method="post" action="/login">
+                
+                <label>
+                    Username: <input type="text" name="username" value="Hacker">
+                </label>
+                <label>
+                    Parola: <input type="password" name="parola" value="">
+                </label>
+                
+                <input type="submit" value="Login">
+            </form>
+            <% } %>
+        <div id="gridd">
+        <section id="hello">
+            <h2>Bun venit! <i class="fas fa-cat"></i></h2>
+            <button id="schimbare-tema"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
+
+            <p>Sperăm să găsiți exact ceea ce căutați la Florăria Thumbelina!</p>
+            <div id="poza">
+                <div id="poza-1">
+                <picture>
+                    
+                    <source srcset="./resurse/imagini/flowershop-966459_640.jpg" media="(max-width:700px)"/>
+                    <source srcset="./resurse/imagini/flowershop-966459_1280.jpg" media="(max-width:1200px)"/>
+                    <img src="./resurse/imagini/flowershop-966459_640.jpg" alt="florarie"/>
+                </picture>
+            </div>
+        </div>
+        <section id="oferta">
+            <p>Oferim urmatoarele tipuri de produse:</p>
+            <ol>
+                <li>Buchete de flori</li>
+                <li>Cutii cu flori</li>
+                <li>Cosuri cu flori</li>
+                <li>Flori criogenate</li>
+                <li>Cadouri(flori+ciocolata/jucarii de plus)</li>
+            </ol>
+        </section>
+        </section>
+        <section id="about">
+            <h2>Despre noi <i class="fas fa-store"></i></h2>
+            <p>Povestea florăriei noastre a început încă de acum 40 de ani, pe când bunicii nostrii cultivau flori în grădina proprie și apoi le vindeau la prăvălia de lângă casă.Trandafiri,lalele,zambile,narcise, toate erau flori locale,care puteau fi cultivate în funcție de sezon.</p>
+            <p>Afacerea s-a dezvoltat de-a lungul anilor și a luat naștere ceea ce azi poartă numele de "Floraria Thumbelina".În prezent comercializăm flori din Olanda,Kenya,Ecuador,dar folosim în creațiile noastre flori ce încă cresc în grădina bunicilor. Chiar daca timpul si-a pus amprenta pe ideea de afacere, inca ne ghidam dupa un citat indian pe care bunicul il indragea : <q> Doar rupându-i petalele, nu ai cum să aduni frumusețea unei flori.</q></p><!--task 10-->
+            <p>În prezent livrăm fericire prin florile noastre în București.</p> 
+        </section>
+        <section id="program">
+            <h2>Program <i class="far fa-clock"></i></h2>
+            <div class="tabel">
+            <table>
+                
+                <caption>Floraria Thumbelina din Bucuresti:</caption>
+                <div class="scroll">
+                <thead>
+                    <tr>
+                        <th>Ziua</th>
+                        <th>Interval orar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Luni-Vineri</td>
+                        <td>09:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sambata</td>
+                        <td>10:00-16:00</td>
+                    </tr>
+                    <tr>
+                        <td>Duminica</td>
+                        <td>10:00-14:00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <!--<tr>
+                        <td colspan="2">Programul poate sa difere.</td>
+                    </tr>-->
+                </tfoot>
+                </div>
+            </table>
+            <p><strong>In perioada sarbatorilor programul poate suferi modificari!</strong></p>
+       </div>
+        </section>
+        
+        <div id="calendar">
+            <h2>Calendar <i class="far fa-calendar-alt"></i></h2>
+            <ul>
+                <li><time datetime="2021-05-21">21 mai 2021</time> - 41 de ani de la infiintare</li>
+                <li><time datetime="2021-06-01">1 iunie 2021</time> - Flori gratis tuturor copiilor</li>
+                <li><time datetime="2021-08-15">15 august 2021</time> - Flori gratis tuturor ce poarta numele de Maria</li>
+            </ul>
+            <%
+            dataServer=new Date();
+            sirData=dataServer.getHours()+":"+dataServer.getMinutes()+":"+dataServer.getSeconds()
+
+            %>
+            <p>Ora server:<span id="data_server"><%= sirData %></span></p>
+            <p>Ora client:<span id="data_client"></span></p>
+            <script>
+                function zero(nr){
+                    if (nr<10) return "0"+nr;
+                    return nr;
+                }
+                
+                d=new Date()
+                document.getElementById("data_client").innerHTML=zero(d.getHours())+":"+zero(d.getMinutes())+":"+zero(d.getSeconds());
+
+                function actualizeazaElemData(id_div){
+                    var data_div=document.getElementById(id_div);
+                    if (data_div.innerHTML!="")
+                    {
+                        var timp=data_div.innerHTML.split(":")
+                        var dt=new Date(2000,1,15, timp[0],timp[1], timp[2] );//nu conteaza data (am pus valori random pentru an, luna si zi) ci timpul
+                    }
+                    else
+                        var dt=new Date();
+                    dt.setSeconds(dt.getSeconds()+1)
+                    data_div.innerHTML=zero(dt.getHours())+":"+zero(dt.getMinutes())+":"+zero(dt.getSeconds());
+                }
+                function actualizeazaData(){
+                    actualizeazaElemData("data_client");
+                    actualizeazaElemData("data_server");
+                }
+                actualizeazaData()
+                setInterval(actualizeazaData,1000)
+            </script>
+        </div>
+        <section id="info">
+            <h2>Anunțuri <i class="fas fa-clipboard-check"></i></h2>
+            <p><strong>Livrarea buchetelor de flori poate fi influentata de numărul de comenzi,trafic și condițiile meteo!!!</strong></p>
+            <p>Ne cerem scuze pentru eventualele neplăceri create. Ne străduim să îmbunătățim modul de livrare al produselor noastre.</p>
+        </section>
+        <div id="user">
+            <h2>Utilizatori <i class="fas fa-users"></i></i></h2>
+            <p>Ion a vizitat site ul acum 5 min.</p>
+            <p>Ioana a cumparat 3 buchete de flori</p>
+            <p>Maria a lasat feedback.</p>
+        </div>
+        <div id="statistici">
+            <h2>Statistici <i class="fas fa-chart-line"></i></h2>
+            <p>97 din 100 de oameni au acordat feedback maxim florariei noastre. Restul de 3 au uitat sa lase feedback:)</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa nunc, commodo ac turpis sed, luctus hendrerit erat. Aenean ac euismod felis, id tincidunt dui. Sed sed tellus in lorem finibus pharetra a at turpis. Suspendisse luctus non orci id tincidunt. Quisque semper eget diam interdum pulvinar.</p>
+        </div>
+        <div id="server">
+            <h2>Date Server <i class="fas fa-spinner fa-pulse"></i></h2>
+            <p>Server: CONNECTED</p>
+            <p>Adresa IP: <%- locals.userIp %></p>
+            <p>Acest site a fost realizat de SC ELENA SRL.</p>
+            <p>Aceeasi firma se ocupa si de mentenanta acestuia.</p>
+        </div>
+        <section id="promotii" class="zona8"> 
+            <h2>Oferte și servicii <i class="fas fa-percent"></i></h2>
+            <article>
+                <h3>PROMOTII DE SEZON </h3>
+                <p>Florăria Thumbelina oferă reduceri de până la <s>20%</s><ins> 30%</ins> (valabil doar luna martie) la cumpărarea mai multor buchete de flori.</p>
+                <p>Aceste reduceri se aplică în apropierea sărbătorilor specifice (ex:onomastice), dar și în lunile Februarie, Martie sau Decembrie!</p>
+                <p>În ofertă se încadrează toate categoriile de produse oferite de florăria noastră,nu doar buchetele de flori!!!</p>
+            </article>
+            <article>
+                <h3>Organizare evenimente</h3>
+            <p>Oferim asistență în ceea ce privește decorarea locațiilor unor evenimente.</p>
+            <p>Pentru mai multe detalii, nu ezitați să ne contactați.Veti primi reduceri la aranjamentele florale!</p>
+            </article>
+           <div><hr class="bara"></div>
+        </section>
+        <section id="prezentare" class="zona8">
+            <h2>Prezentare <i class="fab fa-youtube"></i></h2>
+            
+            <p>Vă prezentăm câteva dintre modalitatile noastre de ambalare a frumoaselor buchete de flori:</p>
+           <!-- <a href="https://www.youtube.com/watch?v=k8gfBS-p8p4&t=87s" target="ifr-video">Buchet trandafiri</a>
+            <a href="https://www.youtube.com/watch?v=RH6x89nSIC8" target="ifr-video">Flori in cutie</a><br>
+            <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/RH6x89nSIC8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        -->
+        <div class="flex-container">
+        <a href="https://www.youtube.com/embed/VXcAtKTHVAY" target="ifr-video">Buchet trandafiri</a>
+        <a href="https://www.youtube.com/embed/0RT2MSGWZZM" target="ifr-video" >Flori in cutie</a><br/>
+        </div>
+        <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/VXcAtKTHVAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--<div><hr class="bara"></div>-->
+    </section>
+   
+        <section id="intrebari" class="zona8">
+            <h2>Intrebari frecvente <i class="far fa-comments"></i></h2>
+            <details><summary><b>Pot fi produsele deteriorate din cauza transportului?</b></summary>
+                <p>NU!Avem mare grija cum transportam florile.</p>
+            </details>
+            <details><summary><b>Pot florile provoca alergii?</b></summary>
+                <p>Da, dar doar in cazul persoanelor cu alergii frecvente.</p>
+            </details>
+            <details><summary><b>Cat timp pot fi pastrate florile?</b></summary>
+                <p>Fiecare buchet/aranjament vine cu un cartonas pe care sunt trecute detalii legate de ingrijirea si modul de pastrare al forilor.</p>
+            </details>
+        </section>
+        </div>
+
+        <section id="galerie-statica">
+            <h2>Galerie Statică</h2>
+            <div id="grid-galerie">
+                <% for(let img of locals.imagini){%>
+                        <div class="div<% (locals.imagini).indexOf(img) %>">
+                        <figure>
+                            <picture>
+                                <source srcset="/<%- img.mic %>" media="(max-width:500px)"/>
+                                <source srcset="/<%- img.mediu %>" media="(max-width:700px)"/> 
+                                <img src="/<%- img.mare %>" alt="poza"/>
+                            </picture>
+                          <figcaption><%- img.titlu %></figcaption>
+                        </figure>
+                    </div>
+               <% } %> 
+               <div class = "div2"></div>
+               <div class = "div4"></div>
+               <div class = "div6"></div>
+               <div class = "div8"></div>
+               <div class = "div10"></div>
+               <div class = "div12"></div>
+    
+    
+            </div>
+        </section>
+
+      <!--
+        <section id="sectiune-galerie-animata">
+            <h2>Galerie animată</h2>
+            <div id="galerie-animata" class="galerie-a">
+                <div>
+                    <figure>
+                        <img src="resurse/imagini/galerie/cadou-craciun.png" alt="cadou de craciun" />
+                        <figcaption>Cadou de Craciun</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="resurse/imagini/galerie/craciun.png" alt="arajament de craciun" />
+                        <figcaption>Aranjament de Craciun</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="resurse/imagini/galerie/decoratiune.png" alt="Decoratiune cu lumanari" />
+                        <figcaption>Decoratiune cu lumanari</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="resurse/imagini/galerie/craciunita1.png" alt="Craciunita alba" />
+                        <figcaption>Craciunita alba</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="resurse/imagini/galerie/craciunita2.png" alt="Craciunita rosie" />
+                        <figcaption>Craciunita rosie</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="resurse/imagini/galerie/craciun2.png" alt="Merry Christmas" />
+                        <figcaption>Merry Christmas</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="resurse/imagini/galerie/trandafir_zapada.png" alt="Trandafir" />
+                        <figcaption>Trandafir</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    -->
+        <section class="sectiune-video">
+            <h2>Video prezentare<i class="fas fa-film"></i></h2>
+            <div id="container-video">
+                <div id="centrare-video">
+                    <div id="clip-video">
+                        <div id="stil-video">
+                            <video width="400" height="300"  playsinline autoplay loop muted controls="" preload="metadata" poster="/resurse/imagini/cat-2083492_640.jpg">
+                                <source src="resurse/video/trandafir.mp4" type="video/mp4">
+                                <source src="resurse/video/trandafir.ogv" type="video/ogv">
+                                <track src="resurse/video/romana.vtt" kind="captions" srclang="ro" label="romana" default="">
+                                <track src="resurse/video/engleza.vtt" kind="captions" srclang="en" label="engleza" default="">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>  
+    <footer>
+        <%- include("../fragmente/footer") %>
+    </footer>
+    <div id="banner">Acesta este un proiect scolar! &#128517;</div>
+    </body>
+    
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

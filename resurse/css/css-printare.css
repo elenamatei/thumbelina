@@ -1,0 +1,126 @@
+#watermark{
+    display:none;
+}
+
+@media print {
+
+main{
+    border:none;
+}
+table td, th {
+    border-color: black;
+}
+h2{
+    color:black;
+}
+article h3{
+    color:black;
+}
+div hr.bara{
+  display: none;
+}
+
+#banner{
+    border:dotted black;
+    width:80vw;
+    position:fixed;
+    /*align-content: center;*/
+    top:0;
+    margin:auto;
+
+}
+
+footer #link-top{
+    
+    display:none;
+}
+#con{
+    display:none;
+}
+nav{
+    display:none;
+}
+
+h1{ color:black;
+    page-break-after: always;
+    margin-top: 50%;
+    text-align:center;
+    margin-left:1cm;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+#gridd{
+    font-size: 10px;
+    box-sizing:border-box;
+   /* page-break-before:always;*/
+    background-color: white;
+   
+    }
+    html, body {
+    width: 210mm;
+
+            overflow:visible !important;
+    }
+    #watermark
+    {
+        display: block;
+        position: fixed;
+        bottom:0;
+        color:rgba(0,0,0,0.4);
+        right:0;
+    }
+    #watermark::after{
+        height:2cm;
+        width:100px;
+        opacity:0.5;
+        padding:5px;
+        display: block;
+        background: white;
+        border:5px double black;
+        border-top-left-radius:10px;
+        border-bottom-left-radius:10px;
+        border-top-right-radius:10px;
+        border-bottom-right-radius:10px;
+        content:"Copyright Matei Elena";
+    }
+
+footer{
+    page-break-before: always;
+
+}
+#poza,#poza-1,#prezentare,#galerie-statica{
+    display:none;
+}
+
+#contact a{
+    cursor: default;
+    pointer-events: none;        
+    text-decoration: none;
+    color: black;
+}
+#colaboratori a{
+    cursor: default;
+    pointer-events: none;        
+    text-decoration: none;
+    color: black;
+}
+
+@page {
+    size: A4 portrait;
+    margin-bottom:2cm;
+    margin-top:2cm;
+    counter-increment: page;
+        
+}
+@page:left{
+
+    margin-left:2.5cm;
+    margin-right:0.5cm;
+    border-radius: 20cm;
+}
+@page:right{
+
+    margin-right:2.5cm;
+    margin-left:0.5cm;
+}
+}

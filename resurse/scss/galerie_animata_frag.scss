@@ -1,0 +1,83 @@
+@use 'sass:list';
+@use 'sass:math';
+$indice: random(4);
+//$nr_imagini:list.nth(7,8,9,11, $indice);
+$nr_imagini:math.random(5) + 6;
+$durata_poza:3;
+$durata:$nr_imagini*$durata_poza;
+
+
+#sectiune-galerie-animata{
+	padding-left: var(--padding-intern);/* variabila din css-ul general*/
+	padding-right: var(--padding-intern);
+}
+.galerie-a{
+	width:400px;
+	height:265px;
+  /*  border-image: url(".resurse/imagini/border_galerie.jpg") 30 round;*/
+	border:4px inset purple;
+	position:relative;
+	overflow:hidden;
+	margin-bottom:5rem;
+}
+.galerie-a figcaption{
+	position:absolute;
+	bottom:0;
+	background:rgba(255,255,255,0.7);
+	width:100%;
+	text-align:center;
+}
+.galerie-a figure{
+	position:relative;
+	width:400px;
+	height:265px;
+}
+
+#galerie-animata figure{	
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:0;
+	animation-name:animatie;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+	animation-fill-mode:forwards;
+	animation-duration:$durata;	
+	transform-origin:0px center;
+    animation-play-state: running;
+}
+#galerie-animata:hover figure{
+    animation-play-state: paused;
+}
+
+@for $i from 1 through $nr_imagini {
+	#galerie-animata figure:nth-of-type( #{$i}) {
+	  animation-delay:$durata - $i*3 + s;
+	}
+  }
+
+$p1:($durata_poza/$durata)*50;
+$p2:($durata_poza/$durata)*100-2;
+$p3:($durata_poza/$durata)*100;
+$p31:($durata_poza/$durata)*100 + 0.000001;
+$p4:100 - ($durata_poza/$durata)*100;
+$p41:100 - ($durata_poza/$durata)*100 + 0.000001;
+
+@keyframes animatie{ 
+	0% {z-index:10;opacity:1;} /*perioada 0-5% in care se afiseaza fara efect */
+	#{$p1}% {transform:scaleY(1);}
+	#{$p2}% {opacity:1;} /* de  aici doresc sa descresc si opacitatea;*/
+	#{$p3}% {z-index:10;opacity:0;transform:scaleY(0.3);}
+	#{$p31}%{z-index:-10; transform:scaleY(1);}/* il ascund cat mai in spate sa nu vina peste imaginile care erau mai sus in html decat el*/
+	
+	#{$p4}% {opacity:0;transform:scaleY(1);z-index:-10;}	
+	#{$p41}% {z-index:0;}/*setez z-index la 0 ca sa revina la ordinea normala de afisare*/
+	100%{opacity:1;z-index:0;}
+}
+
+
+@media screen and (max-width:500px){
+	#sectiune-galerie-animata{
+		display: none;
+	}
+}
